@@ -1,9 +1,22 @@
-import React from 'react'
+import { ADD_TO_CART } from "../Contants";
 
-function Reducers() {
-  return (
-    <div>Reducers</div>
-  )
+const initialState={
+    cardData:[]
 }
 
-export default Reducers
+function cardItems (state=initialState, action)
+{
+    // eslint-disable-next-line default-case
+    switch(action.type){
+        case ADD_TO_CART:
+            return{
+                ...state,
+                cardData:action.data
+            }
+            break;
+            default:
+                return: state
+    }
+}
+
+export default cardItems;

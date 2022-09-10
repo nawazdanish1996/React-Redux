@@ -1,9 +1,15 @@
-import React from 'react'
+import { ADD_TO_CART } from "../Contants";
 
-function Actions() {
-  return (
-    <div>Actions</div>
-  )
+export const addToCart = (data) => {
+  return {
+      type: ADD_TO_CART,
+      data: data
+  }
 }
 
-export default Actions
+export const removeToCart = (data) => {
+  return {
+      type: "REMOVE_TO_CART",
+      data: data
+  }
+}
